@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Knowit Sparks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Knowit users" />
+    <meta name="author" content="David Szilagyi" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+  </head>
+
+  <body>
+    <!-- tabbar navigation -->
+    <!-- <nav class="tabbar">
+      <a href="#/">Users</a>
+      <a href="#/user">Profile</a>
+    </nav> -->
+
+    <!---pages----->
+    <!---main page----->
+    <section id="users" class="page">
+      <header class="header">
+        <img src="./img/logotype-black 1.png" class="logo" />
+      </header>
+      <section class="search-section">
+        <form>
+          <input type="search" placeholder="Search" onkeyup="search(this.value)" onsearch="search('')" class="search" />
+        </form>
+        <hr class="hr" />
+      </section>
+      <section id="users-container" class="grid-container"></section>
+    </section>
+
+    <!---detail view----->
+    <seection id="detailView" class="page overflow-hidden">
+      <header class="header">
+        <div class="logo-back">
+          <a class="left" onclick="goBack()"> <img src="./img/icon-close-start (1) 1.png" /></a>
+          <img src="./img/logotype-black 1.png" class="logo" />
+        </div>
+      </header>
+      <section id="detailViewContainer" class="detail-grid drop-in"></section>
+    </seection>
+    <!-- loader  -->
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
+    <!-- Router script  -->
+    <script src="js/router.js"></script>
+    <!-- App js script -->
+    <script src="js/app.js"></script>
+  </body>
+</html>

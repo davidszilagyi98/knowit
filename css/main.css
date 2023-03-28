@@ -1,0 +1,271 @@
+/* ---------- root variables ---------- */
+:root {
+  --header: #ffffff;
+  --background: #f1f0ed;
+  --background2: #e4e1db;
+  --background3: #fadfd8;
+  --button: #dbeede;
+  --link: #ea58f9;
+  --text: #333333;
+}
+
+body {
+  background-color: var(--background);
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+p {
+  color: var(--text);
+  font-weight: 400;
+}
+
+a {
+  text-decoration: underline;
+  color: var(--text);
+}
+
+.page {
+  display: none;
+  margin-bottom: 5rem;
+}
+/*-----------------header--------------------*/
+.logo {
+  display: flex;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    float: left;
+  }
+}
+
+.header {
+  background-color: var(--header);
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+/*-----------------search--------------------*/
+.search-section {
+  background-color: var(--background);
+  padding-bottom: 0.5rem;
+  margin-top: 4rem;
+}
+.search {
+  display: flex;
+  margin: 0 auto;
+  background-image: url("https://www.knowit.dk/Static/img/icons/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: var(--background);
+  border: none;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.hr {
+  width: 10 rem;
+}
+/*-----------------tabbar--------------------*/
+/* .tabbar {
+  background-color: var(--background3);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  text-align: center;
+  padding: 1rem;
+}
+
+.tabbar a {
+  margin: 1rem;
+  text-decoration: none;
+  background-color: var(--background2);
+  padding: 1rem;
+} */
+/*-----------------list--------------------*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* for mobile */
+  text-align: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr); /* for desktop */
+  }
+}
+
+.grid-container > article {
+  background-color: var(--header);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.grid-container > article img {
+  width: 80%;
+  max-width: 10rem;
+}
+
+/*-----------------card data--------------------*/
+.thumbnail {
+  border-radius: 12px;
+}
+
+.name-gender-div-list {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .dot {
+    display: block;
+  }
+}
+
+.gender {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .gender {
+    display: block;
+  }
+}
+
+.email {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .email {
+    display: block;
+  }
+}
+.phone {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .phone {
+    display: block;
+  }
+}
+
+@media (min-width: 600px) {
+  .gender {
+    display: block;
+  }
+}
+/*-----------------detailed view--------------------*/
+.detail-grid {
+  margin-top: 5rem;
+}
+
+.detail-grid > article {
+}
+
+.logo-back {
+  display: flex;
+  align-items: baseline;
+}
+@media (min-width: 600px) {
+  .desktop-image-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.medium {
+  width: 100%;
+  border-radius: 12px;
+}
+
+@media screen and (min-width: 600px) {
+  .medium {
+    max-width: 20rem;
+    margin-left: 1rem;
+  }
+}
+
+.name-gender-div {
+  display: flex;
+  align-items: baseline;
+}
+
+@media screen and (min-width: 600px) {
+  .name-gender-div {
+  }
+}
+
+.name-gender-div p:nth-child(2) {
+  margin: 1rem;
+}
+
+.details {
+  margin-left: 1rem;
+}
+/* @media screen and (min-width: 600px) {
+  .desktop-image-details {
+    background-color: var(--background2);
+    width: 50%;
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    border-radius: 12px;
+  }
+} */
+
+.details-image {
+  width: 2rem;
+}
+
+.image-p-div {
+  display: flex;
+  align-items: center;
+}
+
+.image-p-div img:nth-child(1) {
+  margin-right: 0.5rem;
+}
+
+/* animation class and keyframes */
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.drop-in {
+  animation: drop-in 1s ease 200ms backwards;
+}
+
+@keyframes drop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
